@@ -6,8 +6,9 @@
 //  Copyright © 2016年 lewis. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface HomeVC : NSObject
+@interface HomeVC : UIViewController
+
 
 @end

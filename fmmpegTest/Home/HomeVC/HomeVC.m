@@ -9,5 +9,9 @@
 #import "HomeVC.h"
 
 @implementation HomeVC
-
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+}
 @end

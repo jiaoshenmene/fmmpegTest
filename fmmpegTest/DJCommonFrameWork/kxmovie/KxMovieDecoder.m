@@ -11,7 +11,7 @@
 
 #import "KxMovieDecoder.h"
 #import <Accelerate/Accelerate.h>
-#include "libavformat/avformat.h"
+#include "../FFmpeg-iOS/include/libavformat/avformat.h"
 #include "libswscale/swscale.h"
 #include "libswresample/swresample.h"
 #include "libavutil/pixdesc.h"
