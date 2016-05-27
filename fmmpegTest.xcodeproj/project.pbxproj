@@ -31,6 +31,7 @@
 		8D418BD41CE2099900618B90 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D418BD31CE2099900618B90 /* libz.tbd */; };
 		8D418BD61CE209AB00618B90 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D418BD51CE209AB00618B90 /* libbz2.tbd */; };
 		8D418BDB1CE209CD00618B90 /* HomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D418BDA1CE209CD00618B90 /* HomeVC.m */; };
+		8DFE88A11CF7E4EC00849CA2 /* DJFIleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DFE88A01CF7E4EC00849CA2 /* DJFIleManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,8 @@
 		8D418BD91CE209CD00618B90 /* HomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVC.h; sourceTree = "<group>"; };
 		8D418BDA1CE209CD00618B90 /* HomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVC.m; sourceTree = "<group>"; };
 		8DB62E941CE2CC92004225E0 /* fmmpegTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = fmmpegTest.entitlements; sourceTree = "<group>"; };
+		8DFE889F1CF7E4EC00849CA2 /* DJFIleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJFIleManager.h; sourceTree = "<group>"; };
+		8DFE88A01CF7E4EC00849CA2 /* DJFIleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJFIleManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +297,7 @@
 		8D418B481CE2097100618B90 /* DJCommonFrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				8DFE889E1CF7E40300849CA2 /* Tools */,
 				8D418B491CE2097100618B90 /* FFmpeg-iOS */,
 				8D418BB91CE2097100618B90 /* kxmovie */,
 			);
@@ -516,6 +520,15 @@
 			path = HomeVC;
 			sourceTree = "<group>";
 		};
+		8DFE889E1CF7E40300849CA2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8DFE889F1CF7E4EC00849CA2 /* DJFIleManager.h */,
+				8DFE88A01CF7E4EC00849CA2 /* DJFIleManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -659,6 +672,7 @@
 				8D418AA11CE1781600618B90 /* ViewController.m in Sources */,
 				8D418A9E1CE1781600618B90 /* AppDelegate.m in Sources */,
 				8D418BD01CE2097100618B90 /* KxMovieViewController.m in Sources */,
+				8DFE88A11CF7E4EC00849CA2 /* DJFIleManager.m in Sources */,
 				8D418A9B1CE1781600618B90 /* main.m in Sources */,
 				8D418BDB1CE209CD00618B90 /* HomeVC.m in Sources */,
 				8D418BCC1CE2097100618B90 /* KxAudioManager.m in Sources */,

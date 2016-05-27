@@ -12,7 +12,7 @@
 
 @interface HomeVC()<UITableViewDelegate , UITableViewDataSource>
 @property (nonatomic , strong) UITableView *mHomeTableView;
-@property (nonatomic , strong) NSArray *contentArray;
+@property (nonatomic , strong) NSMutableArray *contentArray;
 
 @property (nonatomic , strong) NSString *basePatch;
 
@@ -33,7 +33,7 @@
     NSArray *fileList = [[NSArray alloc] init];
     //fileList便是包含有该文件夹下所有文件的文件名及文件夹名的数组
     fileList = [fileManager contentsOfDirectoryAtPath:docDir error:&error];
-    _contentArray = fileList;
+    _contentArray = [fileList mutableCopy];
     
    
     
@@ -44,6 +44,7 @@
     _mHomeTableView.dataSource = self;
     _mHomeTableView.delegate = self;
     [self.view addSubview:_mHomeTableView];
+    _mHomeTableView.allowsMultipleSelectionDuringEditing = NO;
 }
 
 
@@ -86,6 +87,24 @@
     [self presentViewController:vc animated:YES completion:nil];
 
 }
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //add code here for when you hit delete
+        
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        [fileManager removeItemAtPath:[NSString stringWithFormat:@"%@/%@",_basePatch,[_contentArray objectAtIndex:indexPath.row]] error:NULL];
+        [_contentArray removeObjectAtIndex:indexPath.row];
+        [tableView reloadData];
+    }
+}
+
+
+
 
 
 @end
