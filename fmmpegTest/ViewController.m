@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "HomeVC.h"
+#import <AdSupport/AdSupport.h>
+
 
 @interface ViewController ()
 @property (nonatomic , strong) HomeVC *homeVC;
@@ -23,6 +25,12 @@
     _homeVC.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
     [self.view addSubview:_homeVC.view];
+    NSURL *url = [[NSFileManager defaultManager] containerURLForSecurityApplicationGroupIdentifier:@"group.com.dujia.sqtools"];
+    
+    NSLog(@"url = %@",url);
+    ASIdentifierManager *identifierManager = [ASIdentifierManager sharedManager];
+    NSUUID *uuid = identifierManager.advertisingIdentifier;
+    NSLog(@"uuid = %@",uuid.UUIDString);
     
     
 }
